@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to the One Minute Pitch Community.
+We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy reading pitches of all other users, give reviews, read other people reviews and present your own pitches which can be reviewed and voted upon.
