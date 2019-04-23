@@ -20,7 +20,7 @@ This is an online news platform where a user can write his own pitches, read pit
 * On your terminal run `chmod a+x start.py`
 * On your terminal run `./start.py`
 * Access the live site using the local host provided
-* Or access the live website by clicking on this url https://pitch001.herokuapp.com/
+* Or access the live website by clicking on this url https://onepitch001.herokuapp.com/
 ## Known Bugs
 No Bugs
 ## Technologies Used
