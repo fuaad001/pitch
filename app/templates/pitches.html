@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="">
+      <h3 class="text-center">Pitches</h3>
+      {% if pitches %}
+      {% for row in pitches | batch(2) %}
+      <div class="row pitch-row">
+          {% for pitch in row %}
+          <div class="col-md-5 pitch-card">
+              <img src="{{url_for('static',filename='pitch.user.profile_pic')}}" alt="">
+              <h3 class="source-name">{{pitch.title | upper}}</h3>
+              <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
+              <p>Date: <strong>{{pitch.posted}}</strong></p>
+              <p>"{{pitch.pitch_statement}}"</p>
+              <p>CATEGORY: <strong>{{pitch.category | upper}}</strong></p>
+              <div>
+                  {% if current_user.is_authenticated %}
+                  <a class="pitch-comment" href="{{url_for('main.reviews',pitch_id = pitch.id)}}"> <button type="button" name="button" class="btn btn-warning">View Reviews and Votes</button> </a>
+                  {% endif %}
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+      {% endfor %}
+      {% else %}
+      <h2>You have no pitches</h2>
+      {% endif %}
+  </div>
+</div>
+{% endblock %}
