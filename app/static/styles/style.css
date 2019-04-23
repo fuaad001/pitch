@@ -1,0 +1,183 @@
+.card{
+  width: 100%;
+  margin-bottom: 3%;
+  padding: 2%;
+  font-family: 'ZCOOL XiaoWei', serif;
+  height: 400px;
+}
+
+.card, .piece, .piece2, .piece h4, .piece2 h4, h2, h3{
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card img, .piece2 img{
+  width: 100%;
+  height: 200px;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.piece2 img{
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  height: 250px;
+}
+
+.col-md-3 img{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  }
+
+ul {
+  list-style-type: none;
+}
+
+form{
+  font-family: 'Merienda', cursive;
+}
+
+.piece, .piece2{
+  padding: 1%;
+  width: 100%;
+  height: 250px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.piece2{
+  height: 900px;
+}
+
+.piece button, .piece2 button, .card button{
+  font-family: 'ZCOOL XiaoWei', serif;
+  margin: 1%;
+}
+
+.piece h4, .piece2 h4{
+  color: #28a745;
+  padding: 1.5%;
+  box-shadow: 3px 3px 3px grey;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.title{
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+
+h2{
+  text-align: center;
+  background-color: #17a2b8;
+  font-family: 'Merienda', cursive;
+  padding: 1.5%;
+  color: white;
+}
+
+h3{
+  text-align: center;
+  background-color: white;
+  padding: 1.5%;
+  font-family: 'Merienda', cursive;
+  color: #28a745;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.title1{
+  background-color: #28a745;
+}
+
+@media only screen and (min-width: 812px) {
+  .card{
+    height: 100%;
+  }
+  .piece{
+    height: 250px;
+  }
+  .piece2{
+    height: 750px;
+  }
+  .btn-default{
+    margin-top: -16%;
+  }
+  label{
+    margin-top: 3%;
+  }
+  .col-md-3 img{
+  width: 100%;
+  margin: 12%
+  }
+  h2{
+    margin-top: -0.3%;
+  }
+  .card, .piece, .piece2{
+    width: 33%;
+  }
+  .piece{
+    width: 48%;
+    margin-left: 1%;
+    text-align: center;
+  }
+  .marg{
+    margin-top: 5%;
+    padding-right: 20%;
+    text-align: center;
+  }
+  .marg2{
+    padding-left: 10%;
+    text-align: center;
+  }
+  .marg3{
+    padding-right: 10%;
+    text-align: center;
+  }
+}
