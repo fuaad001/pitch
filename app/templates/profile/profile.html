@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <!-- displaying  Username-->
+    <div class="col-md-4 marg2">
+      <h3> {{user.username| capitalize}} </h3>
+
+      <!--Displaying user bio-->
+      {% if user.bio %}
+        <p> {{user.bio}}</p>
+      {%else%}
+        <p> {{user.username| capitalize}} has no bio </p>
+      {% endif %}
+
+      {% if user == current_user %}
+      <a href="{{url_for('main.update_profile',uname=user.username)}}"> <button type="button" name="button" class="btn btn-warning"> Edit User Profile </button></a></a>
+      {% endif %}
+    </div>
+
+    <!--Display profile photo-->
+    <div class="col-md-5 marg3">
+
+      {% if user.profile_pic_path %}
+      <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
+      {%else%}
+      <p>No profile picture</p>
+      {% endif %}
+
+    </div>
+
+    <div class="col-md-3 marg">
+      <a href="{{url_for('main.new_pitch',uname=user.username)}}"> <button type="button" name="button" class="btn btn-warning"> Add a New Pitch </button></a>
+    </div>
+  </div>
+  <div class="row">
+        <h3 class="">Pitches</h3>
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            {% if pitches %}
+            <div class="row ">
+            {% for row in pitches | batch(2) %}
+                {% for pitch in row %}
+                <div class="col-md-5 piece">
+                    <h3 class="source-name">{{pitch.title | upper}}</h3>
+                    <p>CATEGORY: <strong>{{pitch.category | upper}}</strong></p>
+                    <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
+                    <p>Date: <strong>{{pitch.posted}}</strong></p>
+                    <p>"{{pitch.pitch_statement}}"</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+            {% else %}
+            <h2>You have no pitches</h2>
+            {% endif %}
+          </div>
+          <div class="col-md-2"></div>
+
+    </div>
+</div>
+{% endblock %}
