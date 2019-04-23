@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!-- Styles block -->
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 style="text-align: center" class="title">Welcome To One Minute Pitch</h1>
+  <h3>In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?</h3>
+  <h2>Get started:</h2>
+  <ol>
+    <li><h4>Sign up and login to access content</h4></li>
+    <li><h4>Receive a welcoming email once you sign up</h4></li>
+    <li><h4>View the different categories</h4></li>
+    <li><h4>View pitches other people have posted</h4></li>
+    <li><h4>Sign in to vote on the pitch by giving it a like or dislike</li>
+    <li><h4>Sign in to leave a comment</h4></li>
+    <li><h4>Submit a pitch in any category</h4></li>
+    <li><h4>View personal pitches on your profile page</h4></li>
+  </ol>
+</div>
+<h3>Click on 'Categories' to Continue</h3>
+{% endblock %}
