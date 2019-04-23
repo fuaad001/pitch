@@ -1,7 +1,7 @@
 """statement migration
 
 Revision ID: 7052cc88a836
-Revises: 
+Revises:
 Create Date: 2019-04-22 16:44:30.816121
 
 """
