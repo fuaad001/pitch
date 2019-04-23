@@ -48,7 +48,7 @@ class Pitch(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     category = db.Column(db.String(255))
     title = db.Column(db.String(255))
-    pitch_statement = db.Column(db.String())
+    pitch_statement = db.Column(db.VARCHAR())
     posted = db.Column(db.DateTime,default=datetime.utcnow)
     likes = db.Column(db.Integer)
     dislikes = db.Column(db.Integer)
