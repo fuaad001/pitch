@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block content %}
+<div class="container">
+  <div class="col-md-12 pitch-card" style="text-align: center">
+      <h3 class="source-name">{{pitch.title | upper}}</h3>
+      <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
+      <p>Date: <strong>{{pitch.posted}}</strong></p>
+      <p>"{{pitch.pitch_statement}}"</p>
+      <p>CATEGORY: <strong>{{pitch.category | upper}}</strong></p>
+      <p>likes: <strong>{{pitch.likes}}</strong></p>
+      <p>dislikes: <strong>{{pitch.dislikes}}</strong></p>
+      <p>Total Votes: <strong>{{pitch.vote_count}}</strong></p>
+      <a href="{{url_for('main.like',pitch_id = pitch.id)}}"><button type="button" name="button" class="btn btn-warning">Like</button></a>
+      <a href="{{url_for('main.dislike',pitch_id = pitch.id)}}"><button type="button" name="button" class="btn btn-warning">Dislike</button></a>
+      <hr>
+  </div>
+        <h1 class="title">Reviews</h1>
+        <hr>
+
+        {% if reviews %}
+            {{macro.displayReviews(reviews)}}
+            <a class="btn btn-warning btn-lg text-center" href="/pitch/review/new/{{pitch.id}}"> Write a new review</a>
+        {% else%}
+            <h3 class="text-center">This pitch has no reviews </h3>
+
+            <a class="btn btn-warning btn-lg text-center" href="/pitch/review/new/{{pitch.id}}"> Write a new review</a>
+        {% endif %}
+
+</div>
+{% endblock %}
