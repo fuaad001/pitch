@@ -9,18 +9,6 @@
       <div class="row pitch-row">
           {% for pitch in row %}
           <div class="col-md-5 card" style="text-align:center">
-              <img src="/static/pitch.user.profile_pic" alt="">
-              <h3 class="source-name">FROM KENYA WITH LOVE</h3>
-              <p>Posted by <strong>The Niggah</strong> of user ID <strong>1</strong></p>
-              <p>Date: <strong>2019-04-24 06:57:41.691384</strong></p>
-              <p>""</p>
-              <p>CATEGORY: <strong>PICKUP LINES</strong></p>
-              <div>
-
-                  <a class="pitch-comment" href="/reviews/1"> <button type="button" name="button" class="btn btn-warning">View Reviews and Votes</button> </a>
-
-              </div>
-          </div>
               <h3 class="source-name">{{pitch.title | upper}}</h3>
               <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
               <p>Date: <strong>{{pitch.posted}}</strong></p>
