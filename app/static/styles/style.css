@@ -180,4 +180,7 @@ h3{
     padding-right: 10%;
     text-align: center;
   }
+  .btn-default{
+    margin-top: 0%;
+  }
 }
