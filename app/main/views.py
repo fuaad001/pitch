@@ -13,7 +13,7 @@ def index():
     '''
 
     #Getting popular movi
-    title = 'Home - Welcome to The best Movie Review Website Online'
+    title = 'Home - One Minute Pitch'
 
     return render_template('index.html', title = title)
 
