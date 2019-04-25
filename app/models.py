@@ -20,6 +20,7 @@ class User(UserMixin, db.Model):
     pitches = db.relationship("Pitch", backref= "user", lazy="dynamic")
     reviews = db.relationship("Review", backref = "user", lazy = "dynamic")
 
+
     @property
     def password(self):
         raise AttributeError('You cannot read the password attribute')
@@ -54,6 +55,7 @@ class Pitch(db.Model):
     vote_count = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     Reviews = db.relationship("Review", backref = "pitch", lazy = "dynamic")
+    pitch_statement = db.Column(db.String())
 
     def like(self):
         self.likes = self.likes + 1
