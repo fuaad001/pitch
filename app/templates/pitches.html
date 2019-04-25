@@ -8,8 +8,8 @@
       {% for row in pitches | batch(2) %}
       <div class="row pitch-row">
           {% for pitch in row %}
-          <div class="col-md-5 card" style="text-align:center">
-              <h3 class="source-name">{{pitch.title | upper}}</h3>
+          <div class="col-md-5 card white" style="text-align:center">
+              <h3 class="source-name text-center">{{pitch.title | upper}}</h3>
               <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
               <p>Date: <strong>{{pitch.posted}}</strong></p>
               <p>"{{pitch.pitch_statement}}"</p>

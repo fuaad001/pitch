@@ -5,7 +5,7 @@
   <div class="row">
     <!-- displaying  Username-->
     <div class="col-md-4 marg2">
-      <h3> {{user.username| capitalize}} </h3>
+      <h3 class="text-center"> {{user.username| capitalize}} </h3>
 
       <!--Displaying user bio-->
       {% if user.bio %}
@@ -35,19 +35,21 @@
     </div>
   </div>
   <div class="row">
-        <h3 class="">Pitches</h3>
+        <h3 class="text-center">Pitches</h3>
           <div class="col-md-2"></div>
           <div class="col-md-8">
             {% if pitches %}
             <div class="row ">
             {% for row in pitches | batch(2) %}
                 {% for pitch in row %}
-                <div class="col-md-5 piece">
-                    <h3 class="source-name">{{pitch.title | upper}}</h3>
-                    <p>CATEGORY: <strong>{{pitch.category | upper}}</strong></p>
-                    <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
-                    <p>Date: <strong>{{pitch.posted}}</strong></p>
-                    <p>"{{pitch.pitch_statement}}"</p>
+                <div class="col-md-5">
+                    <h3 class="source-name text-center">{{pitch.title | upper}}</h3>
+                    <div class="white">
+                      <p>CATEGORY: <strong>{{pitch.category | upper}}</strong></p>
+                      <p>Posted by <strong>{{pitch.user.username}}</strong> of user ID <strong>{{pitch.user_id}}</strong></p>
+                      <p>Date: <strong>{{pitch.posted}}</strong></p>
+                      <p>"{{pitch.pitch_statement}}"</p>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
